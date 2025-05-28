@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\KLMan\\OneDrive\\Documents\\Uni\\CV\\Kt-543.github.io\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\KLMan\\Downloads\\Flyballers (PROJECT FILE)\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\KLMan\\OneDrive\\Documents\\Uni\\CV\\Kt-543.github.io\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\KLMan\\OneDrive\\Documents\\Uni\\CV\\Kt-543.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -18,15 +25,62 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\KLMan\\OneDrive\\Documents\\Uni\\CV\\Kt-543.github.io\\style.css",
+              "RelativeDocumentMoniker": "style.css",
+              "ToolTip": "C:\\Users\\KLMan\\OneDrive\\Documents\\Uni\\CV\\Kt-543.github.io\\style.css",
+              "RelativeToolTip": "style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-28T15:54:25.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\KLMan\\OneDrive\\Documents\\Uni\\CV\\Kt-543.github.io\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\KLMan\\OneDrive\\Documents\\Uni\\CV\\Kt-543.github.io\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-26T15:58:21.011Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "841d0bc2-8693-448c-892c-3216a985dda0",
+        "Display": 0,
+        "X": 66,
+        "Y": 122,
+        "Width": 1269,
+        "Height": 654,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\KLMan\\Downloads\\Flyballers (PROJECT FILE)\\style.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\Flyballers (PROJECT FILE)\\style.css",
+              "ToolTip": "C:\\Users\\KLMan\\Downloads\\Flyballers (PROJECT FILE)\\style.css",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\Flyballers (PROJECT FILE)\\style.css",
+              "ViewState": "AgIAAL0CAAAAAAAAAAAAAC8DAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-28T15:48:28.393Z",
               "EditorCaption": ""
             }
           ]
