@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(19, 19, 39);
+    background-color: rgb(25, 33, 25);
 }
 
 main {
@@ -17,7 +17,7 @@ main {
     width: 100%;
     height: 10vh;
     color: rgb(255, 255, 255);
-    background-color: rgba(19, 19, 39, 0.814);
+    background-color: rgba(24, 36, 23, 0.814);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,27 +36,30 @@ main {
 }
 
 .myName {
-    font-family: 'Orbitron', sans-serif;
     font-size: 4vh;
     padding: 4vh;
-    padding-left: 4vw;
+    padding-left: 2vw;
 }
 
 
-.welcomeMessage {
+.welcomeBox {
     padding: 5vw;
     padding-top: calc(10vh + 10vw);
     padding-bottom: 12vw;
     width: 100%;
     text-align: center;
-    color:rgb(178, 186, 213);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(19, 19, 39) 100%),
-        url('Images/TitleScreen.png');
+    color:rgb(255, 255, 255);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(25,33,25) 100%),
+        url('Images/websitePic.png');
     background-size: cover;
     background-position: center;
-
+    margin-bottom: 3vh;
 }
 
+.welcomeMessage {
+    background-color: rgba(24, 36, 23, 0.562);
+    
+}
 .welcomeText {
     font-size: clamp(30px, 5vw, 40px);
 }
@@ -67,11 +70,30 @@ main {
     color: rgb(224, 224, 224);
 }
 
+.portfolioTextUnderline {
+    height: 2px;
+    background-color: rgb(208, 191, 199);
+    margin: 1px auto;
+    width: 100%;
 
-.portfolioContainer {
-    padding: 5vw;
 }
 
-/*.portfolioIntroText {
+.portfolioHeading {
+    padding-left: 2vw;
+    font-size: clamp(30px, 7vw, 50px);
+}
+
+.portfolioContainer {
+    background-color: rgba(56, 66, 54, 0.489);
+    width: 96vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding-left: 0.5vw;
+}
+
+.portfolioIntroText {
+    font-size: clamp(20px, 4vw, 30px);
+    padding: 0;
+
     
 }
