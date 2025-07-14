@@ -127,6 +127,8 @@ main {
 video {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .infoBanner {
@@ -159,5 +161,6 @@ video {
 }
 
 .projectKeyPoints {
-    font-size: clamp(15px, 3vw, 25px)
+    font-size: clamp(15px, 3vw, 25px);
+    padding: 10px 10px 10px 25px;
 }
