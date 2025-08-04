@@ -11,7 +11,16 @@
     <header class="header">
         <div class="headerBox">
             <h1 class="myName">Katie Manning</h1>
-            <div class="dropDownMenu"></div>
+            <div class="dropDownMenu">
+                <button onclick="displayDDM()" class="dropBtn">=</button>
+                <div class="dropDownContent" id="dropDown">
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#aboutMe">About Me</a>
+                    <a href="#">Resume</a>
+                    <a href="#">Contact</a>
+
+                </div>
+            </div>
         </div>
     </header>
     
@@ -23,7 +32,7 @@
             </div>
         </section>
 
-        <p class="portfolioHeading">PORTFOLIO</p> 
+        <p class="portfolioHeading" id="portfolio">PORTFOLIO</p> 
         
         <section class="portfolioContainer">
             <h2 class="portfolioIntroText">Take a look at my projects!</h2>
@@ -58,10 +67,10 @@
         </section>
 
         
-        <section class="aboutMeContainer">
+        <section class="aboutMeContainer" id="aboutMe">
             <div class="aboutMeHeading">ABOUT ME</div>
             <div class="aboutMeInfo">
-                <p>Hi, I'm Katie, a game development student with a passion for creativity and problem-solving. I am currently studying at Staffordshire University, where I've had the chance to explore many aspects of game creation - from design and programming, to 3D modelling and UI. </p>
+                <p>Hi, I'm Katie, a game development student with a passion for creativity and problem-solving. I am currently studying at the University of Staffordshire, where I've had the chance to explore many aspects of game creation - from design and programming, to 3D modelling and UI. </p>
                 <p>I enjoy taking on new challenges and learning by doing. I've contributed to multiple team projects - game jams and university projects, each one has helped me grow my skills and better understand how games come together. </p>
                 <p>Outside of game development, I love the outdoors and am actively involved in my university's mountaineering society. I'm keen to keep learning, try out new ideas, and connect with others who share a passion for creating games! </p>
                 <p>Thanks for checking out my portfolio, I hope you enjoy seeing some of what I've been working on!</p>
@@ -69,10 +78,12 @@
         </section>
 
         <section class="footerBox">
-            <p>FOOTER</p>
+            <span><img class="footerIcon" src="Images/linkedInIcon.png"> kt_543 </span>
+            <span><img class="footerIcon" src="Images/emailIcon.png"> klmanning06@outlook.com </span>
         </section>
         
     </main>
 
+    <script src="java.js"></script>
 </body>
 </html>

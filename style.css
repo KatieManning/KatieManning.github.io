@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh; /* adjust for your header height */
+}
+
 body {
     background-color: rgb(25, 33, 25);
 }
@@ -17,12 +22,13 @@ main {
     width: 100%;
     height: 10vh;
     color: rgb(255, 255, 255);
-    background-color: rgba(24, 36, 23, 0.814);
+    background-color: rgba(24, 36, 23, 0.858);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 1;
+    box-shadow: 0px 0px 3px black;
 }
 
 
@@ -41,7 +47,67 @@ main {
     padding-left: 2vw;
 }
 
+/* DROP-DOWN MENU --------------------------------- */
+.dropDownMenu {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    width: 15vw;
+}
 
+.dropBtn {
+    background-color: rgb(83, 99, 83);
+    position: absolute;
+    right: 0;
+    width: 5vh;
+    height: 5vh;
+    padding: 5px;
+    margin: 20px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    border-radius: 5px;
+}
+
+.dropDownContent {
+    display: none;
+    position: absolute;
+    padding-top: 12vh;
+    padding-bottom: 5vh;
+    background-color: rgba(24, 36, 23, 0.951);
+    width: 15vw;
+    font-size: clamp(25px, 3vw, 30px);
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    box-shadow:0px 0px 10px black;
+}
+
+.dropDownContent a {
+    color:  rgb(233, 238, 255);
+    display: block;
+    padding: 20px;
+}
+
+.dropDownContent a:hover {
+    background-color: rgba(83, 99, 83, 0.845);
+}
+
+
+.show {display:block;}
+
+
+@media (max-width: 1024px) {
+    .dropDownMenu {
+        width: 30vw;
+    }
+
+    .dropDownContent {
+        width: 30vw;
+    }
+}
+
+/* WELCOME SECTION --------------------------------- */
 .welcomeBox {
     padding: 5vw;
     padding-top: calc(10vh + 10vw);
@@ -184,7 +250,7 @@ video {
 /* ABOUT ME SECTION --------------------------------- */
 
 .aboutMeContainer {
-    background-color: #536353;
+    background-color: rgb(83, 99, 83);
     width: 96vw;
     margin: 1vw auto;
     padding: 5vw;
@@ -207,4 +273,11 @@ video {
 .footerBox {
     background-color: rgba(56, 66, 54, 0.489);
     padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerIcon {
+    width: 5vh;
 }
