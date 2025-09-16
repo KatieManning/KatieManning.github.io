@@ -3,26 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="pageComponents/include.js" defer></script>
     <title> Katie Manning's Portfolio'</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="headerBox">
-            <h1 class="myName">Katie Manning</h1>
-            <div class="dropDownMenu">
-                <button onclick="displayDDM()" class="dropBtn">=</button>
-                <div class="dropDownContent" id="dropDown">
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#aboutMe">About Me</a>
-                    <a href="#">Resume</a>
-                    <a href="#">Contact</a>
+      <div id="header"></div>
 
-                </div>
-            </div>
-        </div>
-    </header>
     
     <main>
         <section class="welcomeBox">
@@ -40,7 +28,7 @@
             <div class="projectGrid">
 
                 <section class="project">
-                    <a href="" class="projectLink">
+                    <a href="ProjectPages/boundlessHorizon.html" class="projectLink">
                         <div class="projectBox">
                             <div class="videoContainer">
                                 <video src="Videos/BoundlessHorizonTrailer.mp4" type="video/mp4" autoplay muted loop playsinline></video>
@@ -77,13 +65,18 @@
             </div>
         </section>
 
-        <section class="footerBox">
-            <span><img class="footerIcon" src="Images/linkedInIcon.png"> kt_543 </span>
-            <span><img class="footerIcon" src="Images/emailIcon.png"> klmanning06@outlook.com </span>
-        </section>
+
         
+        <div id="footer"></div>
+
     </main>
 
+    <script src="pageComponents/include.js"></script>
     <script src="java.js"></script>
+    <script>
+        includeHTML("header", "pageComponents/header.html");
+        includeHTML("footer", "pageComponents/footer.html");
+    </script>
+
 </body>
 </html>
