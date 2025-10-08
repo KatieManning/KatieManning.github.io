@@ -253,13 +253,47 @@ video {
     background-color: rgb(58, 74, 51);
     width: 96vw;
     margin: 1vw auto;
-    padding: 5vw;
+    padding: 2vw 1vw 0 0;
 }
 
 .aboutMeHeading {
     font-size: clamp(25px, 6vw, 45px);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    padding-left: 2vw;
 }
+
+.aboutMeContent {
+    display: flex;
+    width: 100%;
+   padding: 2vw;
+}
+
+.picOfMe {
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    margin-right: 1vw;
+}
+
+@media screen and (max-width: 1250px) {
+    .aboutMeContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .picOfMe {
+        width: 40%;
+        object-fit: cover;
+        margin-bottom: 1vw;
+    }
+
+    .aboutMeHeading {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+
 
 .aboutMeInfo {
     font-size: clamp(20px, 3vw, 30px);
@@ -309,11 +343,26 @@ video {
      padding-top: 10vh;
 }
 
+
+.backButton {
+    background-color:rgb(29, 48, 27);
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 5vw;
+    height: 3vw;
+    border-radius: 50px;
+    margin: 10px;
+}
+
 .gameIntro {
     padding: 3vw;
     background-color: rgb(35, 44, 37); /* change this per game page */
     background-size: cover;
-    margin-top: 12v;
     font-size: clamp(15px, 3vw, 30px);
     color: white;
 }
@@ -326,13 +375,17 @@ video {
     width: fit-content;
 }
 
+
+
 .gameIntroContent {
     padding-left: 1vw;
+    padding-top: 1vh;
 }
 
 .gameIntroContent .trailerContainerWrapper {
     width: 100%;
     max-width: 1000px;
+    margin: 3vh 0;
 }
 
 .gameIntroContent .trailerContainer {
@@ -352,4 +405,60 @@ video {
     height: 100%;
 }
 
-/* Project page background image classes */
+.gameInfoContainer {
+    font-size: clamp(20px, 1.5vw, 35px);
+}
+
+.projectPageSubHeading {
+    font-weight: bolder;
+    width: 50vw;
+    border-radius: 0 50px 50px 0;
+    padding: 1vw;
+    margin-bottom:1vw;
+}
+
+.subheadingDetails {
+    background-color: rgb(35, 44, 37);
+}
+
+.subheadingMechanics {
+    background-color: rgb(58, 74, 51);
+}
+
+.gameDetails {
+    background-color: rgb(58, 74, 51);
+    padding: 3vw;
+}
+
+.gameMechanics {
+    background-color:rgb(35, 44, 37);
+    padding: 3vw;
+}
+
+.mechanicHeading {
+    font-size: clamp(20px, 1.8vw, 35px);
+    font-weight: bold;
+    margin-top: 2vw;
+}
+
+.mechanicImages {
+    max-width: 60vw;
+    max-height: 50vh;
+}
+
+
+.techVideoContainer {
+    position: relative;
+    width: 93vw;
+    background-color: antiquewhite;
+    height: 35vw;
+  
+}
+
+.techVideoContainer iframe {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
