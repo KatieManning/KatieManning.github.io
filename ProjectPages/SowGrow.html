@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Katie Manning's Portfolio'</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    
+    <div id="header"></div>
+    
+    <main class="main">
+
+        <section class="gameIntro boundlessBG">
+
+            <button class="backButton" onclick="history.back()">&lt;</button>
+
+            <h1 class="projectPageHeading"> Sow & Grow </h1>
+            <section class="gameIntroContent">
+                <p>Solo University Project - UE5 C++ and Blueprints</p>
+
+                <div class="trailerContainerWrapper">
+                    <div class="trailerContainer">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_e8RIcVz1_E?si=T-PBa4ihJtdnxMYB&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                </div>
+                
+                <p>Sow & Grow is a peaceful gardening simulator where the player purchases seeds, plants and waters them, and then harvests and sells the vegetables for a profit. </p>
+                <p><br>This game was created for a university module - C++ for Engines. The goal of the project was to create a set of mechanics with high-quality code focused on good communication between classes.</p>
+           
+            </section>
+      
+        </section>
+        
+        
+        <section class="gameInfoContainer">
+            <section class="gameDetails">
+                <h3 class="projectPageSubHeading subheadingDetails">Details</h3>
+                <p><ul>
+                    <li>Solo University Project</li>
+                    <li>Grade: Pending</li>
+                    <li>Role: Generalist Programmer (UI, mechanics)</li>
+                    <li>Duration: September - November 2025 (9 Weeks)</li>
+                    <li>Genre: Gardening Simulator</li>
+                    
+                </ul></p>
+            </section>
+        
+            <section class="gameMechanics">
+                <h3 class="projectPageSubHeading subheadingMechanics">Game Mechanics / Features</h3>
+
+                <h4 class="mechanicHeading">Planting System</h4>
+                <h5 class="mechanicSubheading">Planting</h5>
+                <p>A plant data table holds all plant-related data including: name, mesh, growth stage meshes, seed price, selling price and UI icon. The planting systems all work using this data table, meaning new plants can be added with ease simply by adding a new row to the table.</p>
+                <img class="mechanicImages" src="../Images/SowGrow/SG1.png">
+                <p>The player interacts with the plant plots using an interaction context. This context passes through which tool the player is holding, what seed they want to plant, and how many. The plant plot then decides which function to run based on the tool. Below is a diagram of how the communication works within this system:</p>
+                <img class="mechanicImages" src="../Images/SowGrow/SG2.png">
+                <p>I made use of object pooling to reduce the performance cost of repeatedly spawning and destroying the plants. Then the data table is used to assign a plant 'type' when a seed is planted.</p>
+               
+                <h5 class="mechanicSubheading">Growing & Watering</h5>
+                <p>A timer begins when a plant is activated, this determines when the plant will swap mash to the next growth progression. Watering the plant will half the time taken to grow.</p>
+
+                <h5 class="mechanicSubheading">Harvesting</h5>
+                <p>When harvested, the plant plot will broadcast the name of the harvested plant and the amount harvested. The player's inventory component will listen for this and will update the stored values and UI accordingly. Here is a diagram showing the communication for this system:</p>
+                <img class="mechanicImages" src="../Images/SowGrow/SG3.png">
+                
+                <h4 class="mechanicHeading">UI</h4>
+                <p>For this project, I designed and implemented the UI including the inventory display, tool bar, planting menu and money counter. <br>The inventory display will create new widgets based on what the player harvests so, for example, a carrot will not be displayed until one has been harvested. This allows items to be dynamically added to the inventory based on the plant data table mentioned previously.<br>.</p>
+                <img class="mechanicImages" src="../Images/SowGrow/SG4.png">
+                <video style="height:50vh; width:auto" src="/Videos/PlantingUI.mp4" type="video/mp4" autoplay muted loop playsinline></video>
+
+           
+
+            </section>
+
+        </section>   
+
+        <div id="footer"></div>
+        
+    </main>
+
+    <script src="../pageComponents/include.js"></script>
+    <script src="../java.js"></script>
+    <script>
+        includeHTML("header", "../pageComponents/header.html");
+        includeHTML("footer", "../pageComponents/footer.html");
+    </script>
+</body>
+</html>
+
+
+

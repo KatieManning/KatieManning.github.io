@@ -9,8 +9,24 @@ html {
   scroll-padding-top: 10vh; /* adjust for your header height */
 }
 
+
+@font-face {
+    font-family: 'Test3';
+    src: url(Fonts/Colombia-Rp0DV.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Orbitron';
+    src: url(Fonts/Orbitron-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url(Fonts/Avenir\ Next\ LT\ Pro\ Regular.otf) format('truetype');
+}
+
+
 body {
     background-color: rgb(36, 48, 34);
+    font-family: Avenir;
 }
 
 main {
@@ -20,7 +36,7 @@ main {
 
 .headerBox {
     width: 100%;
-    height: 10vh;
+    height: 6vh;
     color: rgb(255, 255, 255);
     background-color: rgba(29, 48, 27, 0.858);
     display: flex;
@@ -32,17 +48,8 @@ main {
 }
 
 
-@font-face {
-    font-family: 'Test3';
-    src: url(Fonts/Colombia-Rp0DV.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Orbitron';
-    src: url(Fonts/Orbitron-VariableFont_wght.ttf) format('truetype');
-}
-
 .myName {
-    font-size: 4vh;
+    font-size: 3vh;
     padding: 4vh;
     padding-left: 2vw;
 }
@@ -53,17 +60,17 @@ main {
     display: inline-block;
     top: 0;
     right: 0;
-    width: 15vw;
+    width: 12vw;
 }
 
 .dropBtn {
     background-color: rgb(83, 99, 83);
     position: absolute;
     right: 0;
-    width: 5vh;
-    height: 5vh;
+    width: 4vh;
+    height: 4vh;
     padding: 5px;
-    margin: 20px;
+    margin: 8px;
     font-size: 25px;
     color: rgb(255, 255, 255);
     z-index: 2;
@@ -73,14 +80,24 @@ main {
 .dropDownContent {
     display: none;
     position: absolute;
-    padding-top: 12vh;
-    padding-bottom: 5vh;
+    padding-top: 7vh;
+    padding-bottom: 3vh;
     background-color: rgba(24, 36, 23, 0.951);
-    width: 15vw;
+    width: 12vw;
     font-size: clamp(25px, 3vw, 30px);
     text-align: center;
     border-bottom-left-radius: 50px;
     box-shadow:0px 0px 10px black;
+}
+
+.dropDownContent:hover
+{
+    display: block;
+}
+
+.dropDownMenu:hover .dropDownContent
+{
+    display: block;
 }
 
 .dropDownContent a {
@@ -99,11 +116,11 @@ main {
 
 @media (max-width: 1024px) {
     .dropDownMenu {
-        width: 30vw;
+        width: 20vw;
     }
 
     .dropDownContent {
-        width: 30vw;
+        width: 20vw;
     }
 }
 
@@ -123,11 +140,11 @@ main {
 }
 
 .welcomeMessage {
-    background-color: rgba(24, 36, 23, 0.562);
+    background-color: rgba(20, 40, 19, 0.562);
     
 }
 .welcomeText {
-    font-size: clamp(30px, 5vw, 40px);
+    font-size: clamp(25px, 4vw, 40px);
 }
 
 .portfolioFocusText {
@@ -168,8 +185,8 @@ main {
 
 .projectGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    max-width: 100em;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    max-width: 150em;
     gap: 20px;
     margin-top: 3vh;
 }
@@ -183,6 +200,14 @@ main {
 
 .project {
     width: 100%;
+    padding: 10px;
+}
+
+.project:hover
+{
+    background-color: rgba(29, 48, 27, 0.858);
+    scale: 105%;
+
 }
 
 .projectLink {
@@ -212,6 +237,9 @@ video {
     object-position: center;
 }
 
+.YTNoInteract {
+    pointer-events: none;
+}
 .infoBanner {
     position: absolute;
     display: flex;
@@ -244,6 +272,7 @@ video {
 .projectKeyPoints {
     font-size: clamp(15px, 3vw, 25px);
     padding: 10px 10px 10px 25px;
+
 }
 
 
@@ -308,13 +337,23 @@ video {
     height: 100px;
     background-color: rgba(40, 53, 37, 0.489);
     padding: 2vh;
-    display: flex;
+    display: block;
     align-items: center;
     text-align: center;
     justify-content: space-around;
     bottom: 0;
 }
 
+.SocialsBox
+{
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+    bottom: 0;
+}
 .footerBox a {
     color: white;
     text-decoration: none;
@@ -324,7 +363,7 @@ video {
     width: 5vh;
     height: auto;
     vertical-align: middle;
-
+    margin: 0px 50px;
 }
 
 .footerText {
@@ -334,13 +373,17 @@ video {
     font-size: clamp(10px, 3vw, 30px);
 }
 
-
+.footerIcon:hover
+{
+    scale: 110%;
+    
+}
 
 
 /* ---- Project Pages ------------------------- */
 
 .main {
-     padding-top: 10vh;
+     padding-top: 3vh;
 }
 
 
@@ -348,29 +391,36 @@ video {
     background-color:rgb(29, 48, 27);
     color: white;
     font-weight: bold;
-    font-size: clamp(50px, 7vw, 60px);
+    font-size: clamp(30px, 2vw, 60px);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(70px, 10vw, 100px);
-    height: clamp(50px, 2vw, 60px);
+    width: clamp(50px, 5vw, 70px);
+    height: clamp(30px, 2vw, 50px);
     border-radius: 50px;
     margin: 10px;
+}
+
+.backButton:hover
+{
+        background-color:rgb(57, 94, 53);
+        scale: 110%;
 }
 
 .gameIntro {
     padding: 3vw;
     background-color: rgb(35, 44, 37); /* change this per game page */
     background-size: cover;
-    font-size: clamp(20px, 3vw, 30px);
+    font-size: clamp(20px, 2.5vw, 30px);
     color: white;
 }
 
 .projectPageHeading {
-    font-size: clamp(30px, 8vw, 70px);
+    font-size: clamp(50px, 3vw, 70px);
     background-color: rgb(58, 74, 51);
     border-radius: 50px;
     padding: 10px 20vw 10px 20px;
+    margin-top: 3vh;
     width: fit-content;
 }
 
@@ -382,8 +432,8 @@ video {
 }
 
 .gameIntroContent .trailerContainerWrapper {
-    width: 100%;
-    max-width: 1000px;
+    width: 80vw;
+    max-width: 5000px;
     margin: 3vh 0;
 }
 
@@ -405,7 +455,7 @@ video {
 }
 
 .gameInfoContainer {
-    font-size: clamp(20px, 3vw, 30px);
+    font-size: clamp(20px, 2.5vw, 30px);
 }
 
 .projectPageSubHeading {
@@ -438,9 +488,20 @@ video {
 }
 
 .mechanicHeading {
-    font-size: clamp(20px, 3vw, 35px);
+    font-size: clamp(20px, 2vw, 40px);
     font-weight: bold;
-    margin-top: 2vw;
+    margin-top: 10vh;
+    padding: 5px 5px 5px 15px;
+    background-color: rgba(17, 29, 19, 0.728);
+    border-radius: 20px;
+
+}
+
+.mechanicSubheading
+{
+    font-size: clamp(20px, 2vw, 30px);
+    font-weight: bold;
+    margin-top: 5vh;
 }
 
 .mechanicImages {

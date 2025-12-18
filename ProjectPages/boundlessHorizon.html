@@ -27,8 +27,8 @@
                     </div>
                 </div>
                 
-                <p>Boundless Horizon is a third-person endless runner set on the moon, inspired by Jetpack Joyride. Players will first complete a training simulation, they must dash through a lunar base before launching into a first-person sprint across the moon’s surface, dodging deranged astronauts to reach their ship.  Success unlocks Limitless Mode – a relentless test of precision, where the pace never stops rising and obstacles become increasingly unforgiving.</p>
-                <p><br>The goal of this project was to build a playable proof of concept within a nine-week timeframe, developed entirely in Unreal Engine 5 using Blueprints. My personal aim was to include a wide variety of features and mechanics, to broaden my knowledge of UE5. </p>
+                <p>Third-person endless runner set on the moon. Players must dash through a lunar base before launching into a first-person sprint across the moon’s surface, dodging deranged astronauts to reach their ship.  Limitless Mode is a relentless test of precision, where the pace never stops rising and obstacles become increasingly unforgiving.</p>
+                <p><br>This project was created for a module called Fundamentals of Game Development at university. The goal of this project was to build a playable vertical slice within a nine-week timeframe using UE5 and BPs.</p>
            
             </section>
       
@@ -39,51 +39,46 @@
             <section class="gameDetails">
                 <h3 class="projectPageSubHeading subheadingDetails">Details</h3>
                 <p><ul>
-                    <li>March 2025 - May 2025 (9 Weeks)</li>
                     <li>Solo University Project</li>
-                    <li>A 2.5D side-scrolling game featuring both side-on and first-person perspectives</li>
-                    <li>Focused on gameplay programming and UI design</li>
-                    <li>Key Responsibilities: designed and implemented UI elements (menus, leaderboard, HUD), developed a randomized pickup and obstacle spawning system, enemy AI, and multiple gamemodes</li>
+                    <li>Grade: 99/100 (First)</li>
+                    <li>Role: Generalist Programmer (UI, Mechanics)</li>
+                    <li>Duration: March - May 2025 (9 Weeks)</li>
+                    <li>Genre: 2.5D side-scrolling game featuring both side-on and first-person perspectives</li>
                 </ul></p>
             </section>
         
             <section class="gameMechanics">
                 <h3 class="projectPageSubHeading subheadingMechanics">Game Mechanics / Features</h3>
 
-                <h4 class="mechanicHeading">Backgrounds</h4>
-                <p>I created all the background art for this game. I experimented with several tools, including Ibis Paint, a pixel art app, and Krita, before finding that PowerPoint best suited my needs for this project. The clean shapes and rounded corners available in PowerPoint worked well for the bold, modular style I wanted, allowing me to quickly produce varied wall sections. While I plan to use more professional tools like Photoshop in future projects, PowerPoint provided an efficient solution for this prototype, where visuals were not the main focus.</p>
-                <img class="mechanicImages" src="../Images/BoundlessHorizon/BH1.png">
-                
                 <h4 class="mechanicHeading">UI</h4>
-                <p>This project was my first attempt at creating UI – I designed and implemented menus, a leaderboard and score tracking elements for it, ensuring each element was clear and easy to understand for the player, while keeping the visuals consistent with the game’s aesthetic.
-    For the main menu, I used a generic button widget and assigned functionality as they were added to the menu, this allowed me to easily expand and make edits to the main menu, without remaking repeat elements.
-    I also created progress bars, along with coin and distance counters, to help players keep track of their score.
-    </p>
+                <p>I designed and implemented menus, a leaderboard and score tracking elements, ensuring each element was clear and easy to understand for the player, while keeping the visuals consistent with the game’s aesthetic.</p>
                 <img class="mechanicImages" src="../Images/BoundlessHorizon/BH2.png">
+                <p>For the main menu, I used a generic button widget and assigned functionality as they were added to the menu, this allowed me to easily expand and make edits to the main menu, without remaking repeat elements.<br></p>
 
-                <h4 class="mechanicHeading">Object Spawner</h4>
-                <p>For this game, I created a dynamic object spawner to manage obstacles and pickups. My initial approach used a full grid: objects would spawn across it, move, and then repeat with a new grid. While this idea could have worked, the code became overly complex, and the functionality wasn’t quite right.
-    I reworked the system into a column-based spawner: each spawner generates objects at set intervals, with probabilities controlling how often each object appears. If an obstacle spawns, the chance of another appearing is temporarily lowered. Using a manager, I can set limits - such as a maximum of three obstacles at a time - to ensure no impassible walls are spawned, while also dynamically adjusting spawn probabilities based on recently spawned items.
+                
+                <h4 class="mechanicHeading">Niagara Particle System</h4>
+                <p>In this project, I expanded on my basic Niagara skills to create this cool fire effect for my comet obstacle! This allowed me to experiment with particle behaviour, colour gradients and lifetime settings, building a strong foundation for future VFX work.
+    </p>            
+                <img class="mechanicImages" src="../Images/BoundlessHorizon/BHCometGif.gif">
 
-    To implement this efficiently, I researched how to have spawners operate independently while still being managed centrally. I discovered that child blueprint classes could be added as components within a larger parent class. This setup allows the parent to control shared logic (like spawn caps and rates) while each spawner handles its own probabilities. It effectively connects the system while keeping individual spawners modular and flexible.
+ <h4 class="mechanicHeading">Object Spawner</h4>
+                <p>Created a dynamic object spawner to manage obstacles and pickups.
+    I used a column of spawners: each spawner generates objects at set intervals, with probabilities controlling how often each object appears. If an obstacle spawns, the chance of another appearing is temporarily lowered. Using a manager, limits can be set - such as a maximum of three obstacles in a column - to ensure no impassible walls are spawned. Spawn probabilities are also dynamically adjusted based on recently spawned items.
+
     </p>
                 <img class="mechanicImages" src="../Images/BoundlessHorizon/BH3.png">
                 <p>Below is a snippet of the spawner code. This determines which object will spawn based on probabilities and previously spawned items. Once it has selected an item, it speaks with the spawner manager to check that it is allowed to spawn it, before spawning the item and running a function to tweak the item weightings ready for the next spawn. To see this system in more detail, please see the technical video below.
     </p>
                 <img class="mechanicImages" src="../Images/BoundlessHorizon/BH4.png">
 
-
-                <h4 class="mechanicHeading">Niagara Particle System</h4>
-                <p>In this project, I expanded on my basic Niagara skills to create this cool fire effect for my comet obstacle! This allowed me to experiment with particle behaviour, colour gradients and lifetime settings, building a strong foundation for future VFX work.
-    </p>            
-                <img class="mechanicImages" src="../Images/BoundlessHorizon/BHCometGif.gif">
-
+                <h4 class="mechanicHeading">Background Art</h4>
+                <p>I created the background art for the game using PowerPoint as it best suited the project requirements and my experience level. I used modular features, allowing me to quickly produce varied wall sections.</p>
+                <img class="mechanicImages" src="../Images/BoundlessHorizon/BH1.png">
                 
-                <h4 class="mechanicHeading">Technical Video - Full Project</h4>
-                <p>This is the technical video I made for this project. It contains more information about the project and an overview of the blueprints. I have provided a contents list at the beginning of the video, should  you wish to view specific systems in more depth!</p>
-                <div class="techVideoContainer">
-                    <iframe src="https://www.youtube.com/embed/1k1cO_fhqR8?si=bNALHsf-JYibB7Zj&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
-                </div>
+                
+               
+
+
            
 
             </section>
