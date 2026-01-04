@@ -69,7 +69,6 @@ main {
     right: 0;
     width: 4vh;
     height: 4vh;
-    padding: 5px;
     margin: 8px;
     font-size: 25px;
     color: rgb(255, 255, 255);
@@ -104,6 +103,8 @@ main {
     color:  rgb(233, 238, 255);
     display: block;
     padding: 20px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .dropDownContent a:hover {
@@ -116,11 +117,13 @@ main {
 
 @media (max-width: 1024px) {
     .dropDownMenu {
-        width: 20vw;
+        width: 25vw;
     }
 
     .dropDownContent {
-        width: 20vw;
+        width: 25vw;
+        font-size: clamp(15px, 4vw, 50px);
+
     }
 }
 
@@ -334,20 +337,19 @@ video {
 }
 
 .footerBox {
-    height: 100px;
+    height: 12vh;
     background-color: rgba(40, 53, 37, 0.489);
-    padding: 2vh;
+    padding: 1.5vh;
     display: block;
     align-items: center;
     text-align: center;
-    justify-content: space-around;
     bottom: 0;
 }
 
 .SocialsBox
 {
     width: 100%;
-    padding: 2vh;
+    padding: 1vh;
     display: flex;
     align-items: center;
     text-align: center;
@@ -360,17 +362,17 @@ video {
 }
 
 .footerIcon {
-    width: 5vh;
+    width: 4.5vh;
     height: auto;
     vertical-align: middle;
     margin: 0px 50px;
 }
 
 .footerText {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: clamp(10px, 3vw, 30px);
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: clamp(15px, 3.5vw, 30px);
 }
 
 .footerIcon:hover
@@ -383,7 +385,7 @@ video {
 /* ---- Project Pages ------------------------- */
 
 .main {
-     padding-top: 3vh;
+     padding-top: 6vh;
 }
 
 
@@ -423,7 +425,6 @@ video {
     margin-top: 3vh;
     width: fit-content;
 }
-
 
 
 .gameIntroContent {
@@ -497,27 +498,64 @@ video {
 
 }
 
-.mechanicSubheading
-{
+
+.mechanicSubheading {
     font-size: clamp(20px, 2vw, 30px);
     font-weight: bold;
-    margin-top: 5vh;
+    text-decoration: underline;
+    margin-bottom: 1vh;
+}
+
+.mechanicSubSection {
+    margin-bottom: 8vh;
+
 }
 
 .mechanicImages {
     max-width: 70vw;
     max-height: 50vh;
+    margin: 2vh 0;
 }
 
+.mechanicVideos {
+    max-height: 50vh; 
+    max-width: 70vw;
+    width: auto;
+    margin: 2vh auto;
+}
+
+.mediaRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 @media screen and (max-width: 1024px) {
+    .projectPageHeading {
+        font-size: clamp(30px, 3vw, 70px);
+    }
+    
+    .gameIntroContent .trailerContainerWrapper {
+    width: 90vw;
+    max-width: 5000px;
+    margin: 3vh 0;
+    }
+
+    .mechanicHeading {
+    font-size: clamp(20px, 2vw, 40px);
+    font-weight: bold;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    }
+
     .mechanicImages{
-        max-width: 95vw;
+        max-width: 92vw;
     }
     
     .projectPageSubHeading {
         width: 90vw;
     }
 }
+
 
 .techVideoContainer {
     position: relative;
